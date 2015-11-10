@@ -1,4 +1,4 @@
-# [PartyTable] https://partytable.herokuapp.com/) 
+# [PartyTable] (https://partytable.herokuapp.com/) 
 
 * The app is deployed on Heroku: https://partytable.herokuapp.com 
 * The source code is here on GitHub: https://github.com/rachelcolby11/PartyTable
