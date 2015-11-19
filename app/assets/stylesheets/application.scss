@@ -16,3 +16,24 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+.footer {
+  ul {
+    margin: 0 1m;
+    list-style: none;
+    line-height: 1.5;
+  }
+  li {
+    display: inline;
+    margin: 0 1.4em;
+  }
+  @media (max-width: 1100px) {
+    ul {
+      display: inline-block;        
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+

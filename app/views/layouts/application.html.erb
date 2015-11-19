@@ -10,16 +10,17 @@
 <body>
   <div class="container">
     <ul class="nav nav-tabs">
+      <li><%= link_to "Home", welcome_index_path %></li>
       <li><%= link_to "Dashboard", "#" %></li>
       <li><%= link_to "My Account", "#" %></li>
     </ul>
 
 <%= yield %>
 
-  <ul>
+<!--   <ul class="footer">
     <li><%= link_to "About", welcome_about_path %></li>
     <li><%= link_to "Contact", "#" %></li>
-  </ul>
+  </ul> -->
 
   </div>
 
