@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151119073011) do
+ActiveRecord::Schema.define(version: 20151121072911) do
+
+  create_table "parties", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "date"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "parties", ["user_id"], name: "index_parties_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
