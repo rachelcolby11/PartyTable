@@ -6,6 +6,5 @@
    <h3>Past Parties:</h3>
 <!--     List of past parties goes here
  -->   <br>
-   <p><%= link_to "Start A New Party", '#', class: 'btn btn-success btn-lg' %></p>   
-<!-- Add link to create new party -->
+   <p><%= link_to "Start A New Party", new_party_path, class: 'btn btn-success btn-lg' %></p>   
 </div>
