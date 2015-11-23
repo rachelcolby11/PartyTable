@@ -26,6 +26,10 @@ class PartiesController < ApplicationController
 
   end
 
+  def show
+    @party = Party.find(params[:id])
+  end
+
   def party_params
     params.require(:party).permit(:name, :date)
   end
