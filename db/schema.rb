@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151121212515) do
+ActiveRecord::Schema.define(version: 20151124193600) do
 
   create_table "parties", force: :cascade do |t|
     t.string   "name"
@@ -33,9 +33,11 @@ ActiveRecord::Schema.define(version: 20151121212515) do
     t.integer  "party_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "user_id"
   end
 
   add_index "tasks", ["party_id"], name: "index_tasks_on_party_id"
+  add_index "tasks", ["user_id"], name: "index_tasks_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
