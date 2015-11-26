@@ -30,6 +30,10 @@ class PartiesController < ApplicationController
     @party = Party.find(params[:id])
   end
 
+  def timeline
+    @party = Party.find(params[:id])
+  end
+
   def party_params
     params.require(:party).permit(:name, :date)
   end
