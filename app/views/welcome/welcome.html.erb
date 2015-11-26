@@ -1,0 +1,18 @@
+<div class="jumbotron y">
+  <h1 class="text-center">Welcome to PartyTable!</h1>
+   <h3>Upcoming Parties:</h3>
+<!--     Later, figure out the date thing so this is actually a list of upcoming parties that displays dates too but for now it's just going to list the first party -->   
+
+<ul>
+  <h4>
+  <li><%= Party.first.name %> <%#= Party.first.date.to_date %></li>
+  </h4>
+</ul>
+
+<br>
+   <h3>Past Parties:</h3>
+<!--     List of past parties goes here
+ -->   
+<br>
+   <p class="text-center"><%= link_to "Start A New Party", new_party_path, class: 'btn btn-success btn-lg' %></p>   
+</div>
