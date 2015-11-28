@@ -19,7 +19,14 @@ class PartiesController < ApplicationController
   end  
 
   def update
-
+    @party = Party.find(params[:id])
+   if @party.update_attributes(party_params)
+     flash[:notice] = "Your party has been updated."
+     redirect_to welcome_path
+   else
+     flash[:error] = "There was an error. Please try again."
+     render :edit
+   end
   end
 
   def destroy
