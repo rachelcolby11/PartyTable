@@ -1,21 +1,24 @@
 <h1 class='text-center'><%= @party.name %></h1>
 
 <div class='col-md-4'>
-  <div>
-<!--     calendar here -->  
-  </div>
+  <div class='task-list'>
+    <div>
+  <!--     calendar here -->  
+    </div>
 
-  <div>
-    <h4 class='text-center'>To Do List</h4>
-    <ul>
-      <% @party.tasks.each do |task| %>
-      <li><%= task.title %>, <%= task.duration %> minutes</li>
-      <% end %>
+    <div>
+      <h4 class='text-center'>To Do List</h4>
+      <ul>
+        <% @party.tasks.each do |task| %>
+        <li><%= task.title %>, <%= task.duration %> minutes</li>
+        <% end %>
+    </div>
   </div>
-
 </div>
 
 <div class='col-md-8'>
-  <h4 class='text-center'>The Big Day!</h4> 
-  <!--     timeline planner goes here -->  
+  <div class='timeline-planner'>
+    <h4 class='text-center'>The Big Day!</h4> 
+    <!--     timeline planner goes here -->  
+  </div>
 </div>
