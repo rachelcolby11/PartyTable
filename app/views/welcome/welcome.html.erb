@@ -1,18 +1,22 @@
 <div class="jumbotron y">
   <h1 class="text-center">Welcome to PartyTable!</h1>
-   <h3>Upcoming Parties:</h3>
-<!--     Later, figure out the date thing so this is actually a list of upcoming parties that displays dates too but for now it's just going to list the first party -->   
-
-<ul>
-  <h4>
-  <li><%= Party.first.name %> <%#= Party.first.date.to_date %></li>
-  </h4>
-</ul>
-
-<br>
-   <h3>Past Parties:</h3>
-<!--     List of past parties goes here
- -->   
-<br>
+   <h3>My Parties:</h3>
+    <% if current_user.parties.any? %>
+      <ul>
+          <% current_user.parties.each do |party| %>
+            <% if party %>
+              <li><%= party.name %> - 
+                <% if party.date %><%= party.date.strftime("%B %d %Y") %><% end %> 
+                <%= link_to "View party", party_path(party) %> | <%= link_to "Timeline Planner", timeline_party_path(party) %>
+              </li>                
+            <% end %>
+          <% end %>
+      </ul>
+   <% else %>
+    <p>Don't you think it's time you threw an awesome dinner party?</p>
+   <% end %>
+  <br>
+  <!--    <h3>Past Parties:</h3> // List of past parties goes here
+  <br> -->
    <p class="text-center"><%= link_to "Start A New Party", new_party_path, class: 'btn btn-success btn-lg' %></p>   
 </div>
