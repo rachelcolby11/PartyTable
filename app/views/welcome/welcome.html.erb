@@ -8,6 +8,7 @@
               <li><%= party.name %> - 
                 <% if party.date %><%= party.date.strftime("%B %d %Y") %><% end %> 
                 <%= link_to "View party", party_path(party) %> | <%= link_to "Timeline Planner", timeline_party_path(party) %>
+                <%= link_to party, method: :delete, data: { confirm: "Delete this party?"  } do %><i class="glyphicon glyphicon-remove"> </i>Delete<% end %>
               </li>                
             <% end %>
           <% end %>

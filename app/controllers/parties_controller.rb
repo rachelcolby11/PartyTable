@@ -30,7 +30,14 @@ class PartiesController < ApplicationController
   end
 
   def destroy
-
+    @party = Party.find(params[:id])
+    if @party.destroy
+     flash[:notice] = "Party was deleted."
+     redirect_to welcome_path
+   else
+     flash[:error] = "There was an error. Please try again."
+     redirect_to :back
+   end
   end
 
   def show
