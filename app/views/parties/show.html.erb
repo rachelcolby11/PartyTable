@@ -1,11 +1,18 @@
-<h1 class='text-center'><%= @party.name %></h1>
+<div class='white-box'>
+  <div class='pull-right'><h5>
+    Party Date: <%= @party.date.strftime('%a. %B, %d %Y') %><br>
+    Party Time: <%= @party.date.strftime('%I:%M:%S %p') %><br>
+    Guest Count:
+  </h5></div> 
 
-<!-- <h4><%#= @party.date %></h4> fix date format! -->
-
-<h3>
-  <p>Guest list</p>
-  <p>Menu and Contribution List</p>
-  <p>Grocery List</p>
-  <p>Tableware and Decor</p>
-  <p><%= link_to 'Timeline', timeline_party_path(@party) %></p>
-</h3>
+  <h2 class='header'><%= @party.name %></h2>
+    <h3>Dashboard</h3>
+  <br>
+  <h4>
+    <p>Guest list</p>
+    <p>Menu and Contribution List</p>
+    <p>Grocery List</p>
+    <p>Tableware and Decor</p>
+    <p><%= link_to 'Timeline', timeline_party_path(@party) %></p>
+  </h4>
+</div>
