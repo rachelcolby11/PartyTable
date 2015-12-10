@@ -19,3 +19,16 @@
   height: 80vh;
   padding: 15px;
 }
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  background-color: #F1ECEC;
+  width: 22px;
+}
+
+
+
