@@ -18,7 +18,9 @@
 
 <div class='col-md-8'>
   <div class='timeline-planner'>
-    <h4 class='text-center'>The Big Day!</h4> 
+    <div class='blue-date-box'>
+      <h4 class='text-center'><%= @party.date.strftime('%A %B %d %Y') %></h4> 
+    </div>
     <!--     timeline planner goes here --> 
     <%= render 'planner_grid' %> 
   </div>
