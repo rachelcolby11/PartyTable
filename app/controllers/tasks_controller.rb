@@ -23,11 +23,20 @@ class TasksController < ApplicationController
   end 
 
   def edit
-
+    @party = Party.find(params[:party_id])
+    @task = Task.find(params[:id])
   end  
 
   def update
-
+    @party = Party.find(params[:party_id])
+    @task = Task.find(params[:id])
+   if @task.update_attributes(task_params)
+     flash[:notice] = "Your task has been updated."
+     redirect_to @party
+   else
+     flash[:error] = "There was an error. Please try again."
+     render :edit
+   end
   end
 
   def destroy
