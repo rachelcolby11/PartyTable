@@ -1,0 +1,42 @@
+<%= form_for [@party, @task] do |f| %>
+  <% if @task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+      <% @task.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :task_title %><br>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :category %><br>
+    <%= f.text_field :category, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :estimated_duration %><br>
+    <%= f.text_field :duration, class: 'form-control', placeholder: "How long will it take?" %>
+  </div>  
+  <div class="form-group">
+    <%= f.label :start_time %><br>
+    <%= f.text_field :start_time, class: 'form-control', placeholder: "When will you start this task?" %>
+  </div>
+    <div class="form-group">
+    <%= f.label :end_time %><br>
+    <%= f.text_field :end_time, class: 'form-control', placeholder: "When will this task be complete?" %>  <!-- Can this be a calculated field? -->
+  </div>
+    <div class="form-group">
+    <%= f.label :description %><br>
+    <%= f.text_field :description, class: 'form-control', placeholder: "Add additional details here" %>
+  </div>
+  <div class="form-group">
+    <%= f.submit "Save", class: 'btn btn-success' %>
+  </div>
+
+<% end %> 
