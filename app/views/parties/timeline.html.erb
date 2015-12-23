@@ -10,8 +10,13 @@
       <h4 class='text-center'>To Do List</h4>
       <ul>
         <% @party.tasks.each do |task| %>
-        <li><%= task.title %>, <%= task.duration %> minutes</li>
+        <li><%= task.title %>, 
+          <% if task.category %><%= task.category %>,<% end %>
+         <!-- Add Station to Task object, then show Task Station <%# if task.station %><%#= task.station %>,<%# end %> -->
+          <%= task.duration %> minutes</li> 
         <% end %>
+       </ul>
+       <p id='add-task'><%= link_to '+ Add Item', new_party_task_path(@party) %></p> 
     </div>
   </div>
 </div>
