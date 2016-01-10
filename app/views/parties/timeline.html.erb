@@ -9,12 +9,24 @@
     <div>
       <h4 class='text-center'>To Do List</h4>
       <ul>
-        <% @party.tasks.each do |task| %>
-        <li><%= task.title %>, 
-          <% if task.category %><%= task.category %>,<% end %>
-         <!-- Add Station to Task object, then show Task Station <%# if task.station %><%#= task.station %>,<%# end %> -->
-          <%= task.duration %> minutes</li> 
-        <% end %>
+        <li>Grocery List</li>
+            <% @party.tasks.each do |task| %>
+              <ul> 
+                <% if task.category == 'Grocery List' %><li><%= task.title %>, <%= task.duration %> minutes</li><% end %>
+              </ul>
+            <% end %>        
+          <li>Food Prep and Cooking</li>
+            <% @party.tasks.each do |task| %>
+              <ul> 
+                <% if task.category == 'Food prep and cooking' %><li><%= task.title %>, <%= task.duration %> minutes</li><% end %>
+              </ul>
+            <% end %>
+          <li>Tableware & Decor Setup</li>
+            <% @party.tasks.each do |task| %>
+              <ul> 
+                <% if task.category == 'Tableware & Decor Setup' %><li><%= task.title %>, <%= task.duration %> minutes</li><% end %>
+              </ul>
+            <% end %>
        </ul>
        <p id='add-task'><%= link_to '+ Add Item', new_party_task_path(@party) %></p> 
     </div>
