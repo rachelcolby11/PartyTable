@@ -9,10 +9,22 @@
     <h3>Dashboard</h3>
   <br>
   <h4>
-    <p>Guest list</p>
-    <p>Menu and Contribution List</p>
-    <p>Grocery List</p>
-    <p>Tableware and Decor</p>
-    <p><%= link_to 'Timeline', timeline_party_path(@party) %></p>
+  <div class='row'>
+    <div class='col-md-2 guest'>
+      <p>Guest list</p>
+    </div>
+    <div class='col-md-2 menu'>
+      <p>Menu and Contribution List</p>
+    </div>
+    <div class='col-md-2 grocery'>
+      <p>Grocery List</p>
+    </div>
+    <div class='col-md-2 table-decor'>
+      <p>Tableware and Decor</p>
+    </div>
+    <div class='col-md-2 timeline'>
+      <p><%= link_to 'Timeline', timeline_party_path(@party) %></p>
+    </div>
+  </div>
   </h4>
 </div>
