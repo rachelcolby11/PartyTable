@@ -18,7 +18,12 @@
 @import "bootstrap";
 
 body {
+  font-family: 'Open Sans', sans-serif;
   background-color: #F1ECEC;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li, {
+  font-family: 'Open Sans', sans-serif;
 }
 
 .user-info {
