@@ -12,19 +12,19 @@
         <li>Grocery List</li>
             <% @party.tasks.each do |task| %>
               <ul> 
-                <% if task.category == 'Grocery List' %><li><%= task.title %>, <%= task.duration %> minutes</li><% end %>
+                <% if task.category == 'Grocery List' %><li class='draggable'><%= task.title %>, <%= task.duration %> minutes</li><% end %>
               </ul>
             <% end %>        
           <li>Food Prep and Cooking</li>
             <% @party.tasks.each do |task| %>
               <ul> 
-                <% if task.category == 'Food prep and cooking' %><li><%= task.title %>, <%= task.duration %> minutes</li><% end %>
+                <% if task.category == 'Food prep and cooking' %><li class='draggable'><%= task.title %>, <%= task.duration %> minutes</li><% end %>
               </ul>
             <% end %>
           <li>Tableware & Decor Setup</li>
             <% @party.tasks.each do |task| %>
               <ul> 
-                <% if task.category == 'Tableware & Decor Setup' %><li><%= task.title %>, <%= task.duration %> minutes</li><% end %>
+                <% if task.category == 'Tableware & Decor Setup' %><li class='draggable'><%= task.title %>, <%= task.duration %> minutes</li><% end %>
               </ul>
             <% end %>
        </ul>
@@ -42,3 +42,12 @@
     <%= render 'planner_grid' %> 
   </div>
 </div>
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script>
+    $(function() {
+      $( ".draggable" ).draggable();
+    });
+  </script>
