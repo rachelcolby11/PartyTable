@@ -18,13 +18,13 @@
           <li>Food Prep and Cooking</li>
             <% @party.tasks.each do |task| %>
               <ul> 
-                <% if task.category == 'Food prep and cooking' %><li class='draggable'><%= task.title %>, <%= task.duration %> minutes</li><% end %>
+                <% if task.category == 'Food Prep and Cooking' %><li class='draggable'><%= task.title %>, <%= task.duration %> minutes</li><% end %>
               </ul>
             <% end %>
-          <li>Tableware & Decor Setup</li>
+          <li>Tableware and Decor Set-up</li>
             <% @party.tasks.each do |task| %>
               <ul> 
-                <% if task.category == 'Tableware & Decor Setup' %><li class='draggable'><%= task.title %>, <%= task.duration %> minutes</li><% end %>
+                <% if task.category == 'Tableware and Decor Set-up' %><li class='draggable'><%= task.title %>, <%= task.duration %> minutes</li><% end %>
               </ul>
             <% end %>
        </ul>
