@@ -15,7 +15,7 @@ class TasksController < ApplicationController
 
      if @task.save
        flash[:notice] = "Your task was created."
-       redirect_to welcome_path
+       redirect_to timeline_party_path(@party)
      else
        flash[:error] = "There was an error. Please try again."
        render :new
