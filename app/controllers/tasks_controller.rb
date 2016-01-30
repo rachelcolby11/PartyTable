@@ -40,7 +40,15 @@ class TasksController < ApplicationController
   end
 
   def destroy
-
+    @party = Party.find(params[:party_id])
+    @task = Task.find(params[:id])
+   if @task.destroy
+     flash[:notice] = "Task deleted."
+     redirect_to timeline_party_path(@party)
+   else
+     flash[:error] = "There was an error. Please try again."
+     redirect_to :back
+   end
   end
 
   private
