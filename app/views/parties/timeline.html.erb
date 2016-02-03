@@ -24,7 +24,7 @@
           <li>Tableware and Decor Set-up</li>
             <% @party.tasks.each do |task| %>
               <ul> 
-                <% if task.category == 'Tableware and Decor Set-up' %><li class='draggable'><%= task.title %>, <%= task.duration %> minutes<%= link_to [task.party, task], method: :delete, data: { confirm: "Delete this task?"  } do %><i class="glyphicon glyphicon-remove"></i><% end %></li><% end %>
+                <% if task.category == 'Tableware and Decor Set-up' %><li class='draggable'><%= task.title %>, <%= task.duration %> minutes <%= link_to [task.party, task], method: :delete, data: { confirm: "Delete this task?"  } do %><i class="glyphicon glyphicon-remove"></i><% end %></li><% end %>
               </ul>
             <% end %>
        </ul>
