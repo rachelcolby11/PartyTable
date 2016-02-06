@@ -1,1 +1,6 @@
-<li class='draggable'><%= task.title %>, <%= task.duration %> minutes <%= link_to [task.party, task], method: :delete, data: { confirm: "Delete this task?"  } do %><i class="glyphicon glyphicon-remove"></i><% end %></li>
+<li class='draggable'>
+  <%= task.title %>, 
+  <%= task.duration %> minutes 
+  <%= link_to edit_party_task_path(task.party, task) do %><i class="glyphicon glyphicon-pencil"></i><% end %>
+  <%= link_to [task.party, task], method: :delete, data: { confirm: "Delete this task?"  } do %><i class="glyphicon glyphicon-remove"></i><% end %>
+</li>
