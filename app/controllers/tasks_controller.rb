@@ -32,7 +32,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
    if @task.update_attributes(task_params)
      flash[:notice] = "Your task has been updated."
-     redirect_to @party
+     redirect_to timeline_party_path(@party)
    else
      flash[:error] = "There was an error. Please try again."
      render :edit
