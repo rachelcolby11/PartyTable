@@ -1,0 +1,1 @@
+<li class='draggable'><%= task.title %>, <%= task.duration %> minutes <%= link_to [task.party, task], method: :delete, data: { confirm: "Delete this task?"  } do %><i class="glyphicon glyphicon-remove"></i><% end %></li>
