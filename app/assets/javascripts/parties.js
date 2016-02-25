@@ -3,12 +3,13 @@ $(function() {
     appendTo: "body",
     helper: "clone"
   });
-  $( ".droppable" ).droppable({
+  $( ".x" ).droppable({
     activeClass: "ui-state-default",
     hoverClass: "ui-state-hover",
     accept: ":not(.ui-sortable-helper)",
     drop: function( event, ui ) {
       $( this ).text( ui.draggable.text() ).appendTo( this );
+      $( this ).addClass( "highlight" )
     }
   }).sortable({
     items: "li:not(.placeholder)",
