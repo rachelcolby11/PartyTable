@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :task_title %><br>
+    <%= f.label :task_name %><br>
     <%= f.text_field :title, class: 'form-control medium' %>
   </div>
   <div class="form-group">
@@ -25,8 +25,8 @@
     <%= f.label :category_tableware, "Tableware and Decor Set-up" %>
   </div>
   <div class="form-group">
-    <%= f.label :estimated_duration %><br>
-    <%= f.number_field :duration, class: 'form-control short', placeholder: "How long will it take?" %>
+    <%= f.label :how_long_will_it_take? %><br>
+    <span class="inline"><%= f.number_field :duration, min: 1, class: 'form-control short' %></span><span class="inline">&nbsp minutes</span>
   </div>  
   <div class="form-group">
     <%= f.label :description %><br>

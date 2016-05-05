@@ -53,9 +53,14 @@ h1, h2, h3, h4, h5, h6, p, a, li, {
   }
 }
 
+.inline {
+  display: inline-block;
+}
+
 .form-control.medium {
   width: 35%;
 }
 .form-control.short {
-  width: 15%;
+  width: 4.5em;
+  height: 2em;
 }
