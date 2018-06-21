@@ -1,0 +1,76 @@
+/* table class = .timeline-planner 
+.white-box {
+  background-color: #FFFFFF;
+  height: 80vh;
+  padding: 15px;
+}
+
+.task-list {
+  background-color: #FFFFFF;
+  height: 90vh;
+  border: 2px;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+div.timeline-planner {
+  background-color: #FFFFFF;
+  height: 90vh;
+  border: 2px;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.blue-date-box {
+  width: 530px;
+  padding: 2px 0 1px 0;
+  margin: 25px 40px 0px 80px;
+  color: #FFFFFF;
+  background-color: #0063A7;
+}
+
+table.timeline-planner  {
+    margin: 20px 40px 80px 80px;
+  }
+
+table.timeline-planner td {
+  width: 110px;
+  height: 20px;
+  border-bottom: 1px solid black;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  border-collapse: collapse;
+  background-color: #F1ECEC;
+}
+
+.timeline-planner th {
+  width: 90px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+  padding: 40px;
+  background-color: #FFFFFF;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+th.stationlable, td.stationlable {
+  height: 70px;
+  border-bottom: none;
+  background-color: #F1ECEC;
+  font-size: 18px;
+  text-align: center;
+}
+
+th.timelable {
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+#add-task {
+  position: absolute;
+  left: 45px;
+}
+
+
+*/
